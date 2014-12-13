@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 osama mourad. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "SummaryViewController.h"
 #import "DetailViewController.h"
 
-@interface MasterViewController ()
+@interface SummaryViewController ()
 
 @end
 
-@implementation MasterViewController
+@implementation SummaryViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,10 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning {
