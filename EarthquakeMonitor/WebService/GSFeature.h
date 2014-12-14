@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface GSFeature : NSObject
 
 @property float mag;
 @property float red;
 @property float green;
+@property UIColor *color;
 
 @property float lng;
 @property float lat;

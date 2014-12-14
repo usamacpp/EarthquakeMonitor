@@ -10,6 +10,7 @@
 
 @implementation GSFeature : NSObject
 
+//get needed data from feature row
 -(void)parse:(NSDictionary*)fet
 {
     NSDictionary *props = [fet objectForKey:@"properties"];
@@ -25,8 +26,6 @@
     _lng = [[coord objectAtIndex:0] doubleValue];
     _lat = [[coord objectAtIndex:1] doubleValue];
     _depth = [[coord objectAtIndex:2] doubleValue];
-    
-    //mag = 7;
     
     //claculate color
     _red = 0.0f;
@@ -47,6 +46,8 @@
         _green = (1.0f - ((_mag - 0.9f)/9.1f))/2.0f;
         _red = (1.0f - ((9.0f - _mag)/9.1f))/2.0f;
     }
+    
+    _color = [UIColor colorWithRed:_red green:_green blue:0.0f alpha:0.9f];
 }
 
 @end

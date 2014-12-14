@@ -22,7 +22,10 @@
 
 @interface WSHelper : NSObject
 
-+(void)setDelegate:(id<WSHelperDelegate>)delegate;
+@property (readonly) BOOL isOnline;
+@property (nonatomic) id<WSHelperDelegate> del;
+
+-(void)setDelegate:(id<WSHelperDelegate>)delegate;
 -(void)retrieveFeaturesList;
 
 @end

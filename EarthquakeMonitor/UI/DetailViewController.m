@@ -28,7 +28,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        GSFeature *gsfet = [[GSFeature alloc] init];
+        gsfet = [[GSFeature alloc] init];
         
         [gsfet parse:self.detailItem];
         
@@ -45,21 +45,22 @@
         self.detailDescriptionLabel.text = [NSString stringWithFormat:@" %@\n %@\n %@", magString,
                                                                                         dateString,
                                                                                         locString];
-        self.detailDescriptionLabel.backgroundColor = [UIColor colorWithRed:gsfet.red green:gsfet.green blue:0.0f alpha:1.0f];
+        self.detailDescriptionLabel.backgroundColor = gsfet.color;
         
         
         //add annotation pin
+        _map.delegate = self;
         if(ann == nil)
             ann = [[MKPointAnnotation alloc] init];
         else
             [_map removeAnnotation:ann];
         
         [ann setCoordinate: CLLocationCoordinate2DMake(gsfet.lat, gsfet.lng)];
-        //[ann setTitle:@"place"];
-        //[ann setSubtitle:str];
+        [ann setTitle:gsfet.place];
         [_map addAnnotation:ann];
         
-        _map.centerCoordinate = CLLocationCoordinate2DMake(gsfet.lat, gsfet.lng);
+        //set zoom and center coord
+        [self SetZoom:20.0 location:CLLocationCoordinate2DMake(gsfet.lat, gsfet.lng)];
     }
 }
 
@@ -72,6 +73,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - util
+
+//set on map center point with defined zoom level
+-(void) SetZoom:(double)miles location:(CLLocationCoordinate2D) newLoc
+{
+    if(miles < 0.025 || miles > 7000)
+        return;
+    
+    double scalingFactor = ABS( cos(2 * M_PI * newLoc.latitude /360.0) );
+    MKCoordinateSpan span;
+    span.latitudeDelta = miles/69.0f;
+    span.longitudeDelta = miles/( scalingFactor*69.0f );
+    MKCoordinateRegion region;
+    region.span = span;
+    region.center = CLLocationCoordinate2DMake(newLoc.latitude, newLoc.longitude);
+    [_map setRegion:region animated:YES];
 }
 
 @end

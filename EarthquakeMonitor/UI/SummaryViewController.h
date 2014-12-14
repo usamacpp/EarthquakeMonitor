@@ -13,12 +13,14 @@
 
 @interface SummaryViewController : UITableViewController <WSHelperDelegate, UIScrollViewDelegate>
 {
-    NSArray *fets;
-    WSHelper *hlpr;
+    NSArray *fets;      //features list
+    WSHelper *hlpr;     //web service helper
     
-    NSDate *lastPageScroll;
+    NSDate *lastPageScroll; //date object to keep last time scroll view pulled down or up
+    NSTimer *timer;     //refresh timer
 }
 
+@property (strong, nonatomic) IBOutlet UINavigationItem *titleNavBar;
 - (IBAction)refreshFeatruresList:(id)sender;
 
 @end

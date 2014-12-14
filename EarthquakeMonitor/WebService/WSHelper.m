@@ -10,11 +10,9 @@
 
 @implementation WSHelper
 
-id<WSHelperDelegate> del;
-
-+(void)setDelegate:(id<WSHelperDelegate>)delegate
+-(void)setDelegate:(id<WSHelperDelegate>)delegate
 {
-    del = delegate;
+    _del = delegate;
 }
 
 -(void)retrieveFeaturesList
@@ -24,6 +22,7 @@ id<WSHelperDelegate> del;
     
     if (remoteHostStatus != NotReachable) {
         //if online get the list from web service
+        _isOnline = YES;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             @try {
                 
@@ -35,6 +34,7 @@ id<WSHelperDelegate> del;
                 NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSLog(@"WS = %@", strData);
                 
+                //store text locally for offline use
                 NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
                 [defs setValue:data forKey:@"lastUpdate"];
                 [defs synchronize];
@@ -45,15 +45,15 @@ id<WSHelperDelegate> del;
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //update delegate with recent features list
-                    if([del respondsToSelector:@selector(wsFeaturesListRetrieved:)])
-                        [del wsFeaturesListRetrieved:arr];
+                    if([_del respondsToSelector:@selector(wsFeaturesListRetrieved:)])
+                        [_del wsFeaturesListRetrieved:arr];
                 });
             }
             @catch (NSException *exception) {
                 //if error occured
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    if([del respondsToSelector:@selector(wsError)])
-                        [del wsError];
+                    if([_del respondsToSelector:@selector(wsError)])
+                        [_del wsError];
                 });
             }
         });
@@ -61,6 +61,8 @@ id<WSHelperDelegate> del;
     else
     {
         // do offline list loading
+        
+        _isOnline = NO;
         
         NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
         NSData *data = [defs valueForKey:@"lastUpdate"];
@@ -71,19 +73,15 @@ id<WSHelperDelegate> del;
             
             NSArray *arr = [dic objectForKey:@"features"];
             
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //update delegate with recent features list
-                if([del respondsToSelector:@selector(wsFeaturesListRetrieved:)])
-                    [del wsFeaturesListRetrieved:arr];
-            });
+            //update delegate with recent features list
+            if([_del respondsToSelector:@selector(wsFeaturesListRetrieved:)])
+                [_del wsFeaturesListRetrieved:arr];
         }
         else
         {
             //if error occured
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if([del respondsToSelector:@selector(wsError)])
-                    [del wsError];
-            });
+            if([_del respondsToSelector:@selector(wsError)])
+                [_del wsError];
         }
     }
 }

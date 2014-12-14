@@ -14,6 +14,7 @@
 @interface DetailViewController : UIViewController <MKMapViewDelegate>
 {
     MKPointAnnotation *ann;
+    GSFeature *gsfet;
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *map;
