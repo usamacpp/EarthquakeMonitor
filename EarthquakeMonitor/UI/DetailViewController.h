@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface DetailViewController : UIViewController
+#import "GSFeature.h"
 
+@interface DetailViewController : UIViewController <MKMapViewDelegate>
+{
+    MKPointAnnotation *ann;
+}
+
+@property (strong, nonatomic) IBOutlet MKMapView *map;
+@property (strong, nonatomic) IBOutlet UINavigationItem *detailsNavBar;
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
