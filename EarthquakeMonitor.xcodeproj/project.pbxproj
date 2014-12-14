@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22764251A3C8C070046F1B1 /* AppIcon_512.png in Resources */ = {isa = PBXBuildFile; fileRef = A227641D1A3C8C070046F1B1 /* AppIcon_512.png */; };
+		A22764261A3C8C070046F1B1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A227641F1A3C8C070046F1B1 /* DetailViewController.m */; };
+		A22764271A3C8C070046F1B1 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22764211A3C8C070046F1B1 /* SummaryViewController.m */; };
+		A22764281A3C8C070046F1B1 /* WSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A22764241A3C8C070046F1B1 /* WSHelper.m */; };
+		A227642F1A3CBED50046F1B1 /* GSFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = A227642E1A3CBED50046F1B1 /* GSFeature.m */; };
+		A22764361A3CCE630046F1B1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A22764321A3CCE630046F1B1 /* Reachability.m */; };
+		A22764371A3CCE630046F1B1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A22764351A3CCE630046F1B1 /* MBProgressHUD.m */; };
 		A2D2F5BB1A3C505F00AD7B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5BA1A3C505F00AD7B5E /* main.m */; };
 		A2D2F5BE1A3C505F00AD7B5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5BD1A3C505F00AD7B5E /* AppDelegate.m */; };
-		A2D2F5C11A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5BF1A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodeld */; };
-		A2D2F5C41A3C505F00AD7B5E /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5C31A3C505F00AD7B5E /* SummaryViewController.m */; };
-		A2D2F5C71A3C505F00AD7B5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5C61A3C505F00AD7B5E /* DetailViewController.m */; };
 		A2D2F5CA1A3C505F00AD7B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D2F5C81A3C505F00AD7B5E /* Main.storyboard */; };
 		A2D2F5CC1A3C505F00AD7B5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D2F5CB1A3C505F00AD7B5E /* Images.xcassets */; };
 		A2D2F5CF1A3C505F00AD7B5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D2F5CD1A3C505F00AD7B5E /* LaunchScreen.xib */; };
 		A2D2F5DB1A3C505F00AD7B5E /* EarthquakeMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D2F5DA1A3C505F00AD7B5E /* EarthquakeMonitorTests.m */; };
-		A2D2F5E51A3C5C1700AD7B5E /* AppIcon_512.png in Resources */ = {isa = PBXBuildFile; fileRef = A2D2F5E41A3C5C1700AD7B5E /* AppIcon_512.png */; };
 		A2D2F5E71A3C664A00AD7B5E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D2F5E61A3C664A00AD7B5E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,23 +34,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A227641D1A3C8C070046F1B1 /* AppIcon_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_512.png; sourceTree = "<group>"; };
+		A227641E1A3C8C070046F1B1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A227641F1A3C8C070046F1B1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A22764201A3C8C070046F1B1 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		A22764211A3C8C070046F1B1 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		A22764231A3C8C070046F1B1 /* WSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHelper.h; sourceTree = "<group>"; };
+		A22764241A3C8C070046F1B1 /* WSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSHelper.m; sourceTree = "<group>"; };
+		A227642D1A3CBED50046F1B1 /* GSFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFeature.h; sourceTree = "<group>"; };
+		A227642E1A3CBED50046F1B1 /* GSFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFeature.m; sourceTree = "<group>"; };
+		A22764311A3CCE630046F1B1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A22764321A3CCE630046F1B1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A22764341A3CCE630046F1B1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A22764351A3CCE630046F1B1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A2D2F5B51A3C505F00AD7B5E /* EarthquakeMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthquakeMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D2F5B91A3C505F00AD7B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D2F5BA1A3C505F00AD7B5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2D2F5BC1A3C505F00AD7B5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D2F5BD1A3C505F00AD7B5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A2D2F5C01A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EarthquakeMonitor.xcdatamodel; sourceTree = "<group>"; };
-		A2D2F5C21A3C505F00AD7B5E /* SummaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
-		A2D2F5C31A3C505F00AD7B5E /* SummaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
-		A2D2F5C51A3C505F00AD7B5E /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		A2D2F5C61A3C505F00AD7B5E /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A2D2F5C91A3C505F00AD7B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2D2F5CB1A3C505F00AD7B5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2D2F5CE1A3C505F00AD7B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A2D2F5D41A3C505F00AD7B5E /* EarthquakeMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakeMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D2F5D91A3C505F00AD7B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D2F5DA1A3C505F00AD7B5E /* EarthquakeMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarthquakeMonitorTests.m; sourceTree = "<group>"; };
-		A2D2F5E41A3C5C1700AD7B5E /* AppIcon_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_512.png; sourceTree = "<group>"; };
 		A2D2F5E61A3C664A00AD7B5E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -70,10 +80,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A227641C1A3C8C070046F1B1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A227641D1A3C8C070046F1B1 /* AppIcon_512.png */,
+				A227641E1A3C8C070046F1B1 /* DetailViewController.h */,
+				A227641F1A3C8C070046F1B1 /* DetailViewController.m */,
+				A22764201A3C8C070046F1B1 /* SummaryViewController.h */,
+				A22764211A3C8C070046F1B1 /* SummaryViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A22764221A3C8C070046F1B1 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				A22764231A3C8C070046F1B1 /* WSHelper.h */,
+				A22764241A3C8C070046F1B1 /* WSHelper.m */,
+				A227642D1A3CBED50046F1B1 /* GSFeature.h */,
+				A227642E1A3CBED50046F1B1 /* GSFeature.m */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		A22764301A3CCE630046F1B1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A22764311A3CCE630046F1B1 /* Reachability.h */,
+				A22764321A3CCE630046F1B1 /* Reachability.m */,
+				A22764331A3CCE630046F1B1 /* WaitIndicator */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A22764331A3CCE630046F1B1 /* WaitIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				A22764341A3CCE630046F1B1 /* MBProgressHUD.h */,
+				A22764351A3CCE630046F1B1 /* MBProgressHUD.m */,
+			);
+			path = WaitIndicator;
+			sourceTree = "<group>";
+		};
 		A2D2F5AC1A3C505E00AD7B5E = {
 			isa = PBXGroup;
 			children = (
-				A2D2F5E61A3C664A00AD7B5E /* MapKit.framework */,
 				A2D2F5B71A3C505F00AD7B5E /* EarthquakeMonitor */,
 				A2D2F5D71A3C505F00AD7B5E /* EarthquakeMonitorTests */,
 				A2D2F5B61A3C505F00AD7B5E /* Products */,
@@ -92,17 +143,14 @@
 		A2D2F5B71A3C505F00AD7B5E /* EarthquakeMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				A2D2F5E41A3C5C1700AD7B5E /* AppIcon_512.png */,
-				A2D2F5BC1A3C505F00AD7B5E /* AppDelegate.h */,
-				A2D2F5BD1A3C505F00AD7B5E /* AppDelegate.m */,
-				A2D2F5C21A3C505F00AD7B5E /* SummaryViewController.h */,
-				A2D2F5C31A3C505F00AD7B5E /* SummaryViewController.m */,
-				A2D2F5C51A3C505F00AD7B5E /* DetailViewController.h */,
-				A2D2F5C61A3C505F00AD7B5E /* DetailViewController.m */,
+				A22764301A3CCE630046F1B1 /* Util */,
+				A227641C1A3C8C070046F1B1 /* UI */,
+				A22764221A3C8C070046F1B1 /* WebService */,
 				A2D2F5C81A3C505F00AD7B5E /* Main.storyboard */,
 				A2D2F5CB1A3C505F00AD7B5E /* Images.xcassets */,
 				A2D2F5CD1A3C505F00AD7B5E /* LaunchScreen.xib */,
-				A2D2F5BF1A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodeld */,
+				A2D2F5BC1A3C505F00AD7B5E /* AppDelegate.h */,
+				A2D2F5BD1A3C505F00AD7B5E /* AppDelegate.m */,
 				A2D2F5B81A3C505F00AD7B5E /* Supporting Files */,
 			);
 			path = EarthquakeMonitor;
@@ -111,6 +159,7 @@
 		A2D2F5B81A3C505F00AD7B5E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2D2F5E61A3C664A00AD7B5E /* MapKit.framework */,
 				A2D2F5B91A3C505F00AD7B5E /* Info.plist */,
 				A2D2F5BA1A3C505F00AD7B5E /* main.m */,
 			);
@@ -222,7 +271,7 @@
 				A2D2F5CA1A3C505F00AD7B5E /* Main.storyboard in Resources */,
 				A2D2F5CF1A3C505F00AD7B5E /* LaunchScreen.xib in Resources */,
 				A2D2F5CC1A3C505F00AD7B5E /* Images.xcassets in Resources */,
-				A2D2F5E51A3C5C1700AD7B5E /* AppIcon_512.png in Resources */,
+				A22764251A3C8C070046F1B1 /* AppIcon_512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,11 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D2F5C71A3C505F00AD7B5E /* DetailViewController.m in Sources */,
-				A2D2F5C41A3C505F00AD7B5E /* SummaryViewController.m in Sources */,
 				A2D2F5BE1A3C505F00AD7B5E /* AppDelegate.m in Sources */,
 				A2D2F5BB1A3C505F00AD7B5E /* main.m in Sources */,
-				A2D2F5C11A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodeld in Sources */,
+				A227642F1A3CBED50046F1B1 /* GSFeature.m in Sources */,
+				A22764361A3CCE630046F1B1 /* Reachability.m in Sources */,
+				A22764261A3C8C070046F1B1 /* DetailViewController.m in Sources */,
+				A22764281A3C8C070046F1B1 /* WSHelper.m in Sources */,
+				A22764271A3C8C070046F1B1 /* SummaryViewController.m in Sources */,
+				A22764371A3CCE630046F1B1 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,19 +505,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A2D2F5BF1A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A2D2F5C01A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodel */,
-			);
-			currentVersion = A2D2F5C01A3C505F00AD7B5E /* EarthquakeMonitor.xcdatamodel */;
-			path = EarthquakeMonitor.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A2D2F5AD1A3C505E00AD7B5E /* Project object */;
 }
